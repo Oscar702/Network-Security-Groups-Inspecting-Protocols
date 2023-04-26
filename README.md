@@ -37,7 +37,7 @@ To start you need to create two virtual machine on Microsoft Azure. Name one vir
 
 
 <img src="https://i.imgur.com/ReIE5nc.png" />
-<p>Once installed open Wireshark and filter for ICMP Traffic only.The Internet Control Message Protocol (ICMP) is a protocol that devices within a network use to communicate problems with data transmission.We will ping VM2 and use Wireshark to filter and only capture ICMP packets. We will them be able to see the ICMP packets on Wireshark.
+<p>Once installed open Wireshark and filter for ICMP Traffic only.The Internet Control Message Protocol (ICMP) is a protocol that devices within a network use to communicate problems with data transmission.We will ping VM2 private address using Powershell.Then we then use Wireshark to filter and only capture ICMP packets. We will them be able to see the ICMP packets on Wireshark. With Wireshark you can inspect each individual packet.
 </p>
 <br />
 <p>
@@ -45,17 +45,19 @@ To start you need to create two virtual machine on Microsoft Azure. Name one vir
 
 </p>
 <p>
-We can inspect each individual packet and see the actual data that is being sent in each ping. the picture below demonstrates just that. 
+ 
 </p>
 <br />
 <p>
-<img src="https://i.imgur.com/GLxSIG3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 </p>
 <p>
-In the next portion of the lab we will perpetually ping the Linux machine with the command ping -t. This will continually ping the machine until we decide to stop it, while the Windows machine is pinging the Linux machine we will go to the Linux machine and block inbound ICMP traffic on it's firewall. Once we do that we will stop recieving echo replys from the Linux machine. We will block ICMP by creating a new Network Security Group on the Linux machine that will be set to block ICMP. We can allow the traffic by allowing ICMP on the Linux Network Security Groups page on Azure. 
+Next, we will perpetually ping VM2 (Linux) using command ping -t. This will continually ping the machine until we decide to stop it. 
 </p>
 <br />
 <img src="https://i.imgur.com/NrvtWD9.png" alt="ping -t"/>
+
+<p> while the Windows machine is pinging the Linux machine we will go to the Linux machine and block inbound ICMP traffic on it's firewall. Once we do that we will stop recieving echo replys from the Linux machine. We will block ICMP by creating a new Network Security Group on the Linux machine that will be set to block ICMP. We can allow the traffic by allowing ICMP on the Linux Network Security Groups page on Azure. </p>
 
 </p>
 <img src="https://i.imgur.com/Asl80tN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
