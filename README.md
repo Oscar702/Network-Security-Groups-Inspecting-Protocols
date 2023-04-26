@@ -57,10 +57,12 @@ Next, we will perpetually ping VM2 (Linux) using command ping -t. This will cont
 <br />
 <img src="https://i.imgur.com/NrvtWD9.png" alt="ping -t"/>
 
-<p> while the VM1(Windows) is perpetually pinging VM2 (Linux)  we will go to back in the Azure portal to access VM2 NSG (Network Security Group). Once in the NSG of VM2 create a new rule to block inbound ICMP. Write value of 200 in priority and name rule DENY_ICMP_PING_FROM_ANYWHERE.  Once we do that we will stop recieving echo replys from the Linux machine. We will block ICMP by creating a new Network Security Group on the Linux machine that will be set to block ICMP. We can allow the traffic by allowing ICMP on the Linux Network Security Groups page on Azure. </p>
+<p> while the VM1(Windows) is perpetually pinging VM2 (Linux)  we will go to back in the Azure portal to access VM2 NSG (Network Security Group).  </p>
 
-</p>
-<img src="https://i.imgur.com/8FXlWxY.png"  alt="Disk Sanitization Steps"/>
+
+<img src="https://i.imgur.com/8FXlWxY.png"  alt="Disk Sanitization Steps"/> 
+
+Once in the NSG of VM2 create a new rule to block inbound ICMP. Write the value of 200 in priority and name the rule DENY_ICMP_PING_ANYWHERE. Once that is done you will notice on Wireshark the VM1 will stop recieving echo replys from VM2 (Linux). When we remove that rule VM2 Network Security Group will allow ICMP traffic again.
 
 <p>
 <img src="https://i.imgur.com/xcqewfe.png" alt="Deny Rule"/>
@@ -69,7 +71,8 @@ Next, we will perpetually ping VM2 (Linux) using command ping -t. This will cont
 Next we will use our Windows machine to SSH to the Linux machine. SSH has no GUI it just gives the user access to the machines CLI. We will set the wireshark filter to capture SSH packets only. When we ssh into the Linux machine with the command prompt "ssh labuser@10.0.0.5" we can see that wireshark starts to immediately capture SSH packets.
 </p>
 <br />
-<img src="https://i.imgur.com/zteR41r.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/pSUpUpZ.png" alt="SSH"/>
+
 </p>
 <p>
 Now we will use wireshark to filter for DHCP. DHCP is the Dynamic Host Configuration Protocol this works on ports 67/68. It is used to assign IP addresses to machines. We will request a new ip address with the command "ipconfig /renew". Once we enter the command wireshark will capture DHCP traffic.
