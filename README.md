@@ -22,17 +22,17 @@ Here we will observe different network traffic to and from two virtual machines.
 - Windows 10 (21H2)
 - Ubuntu Server 20.04
 
-<h2>Steps and Actions/h2>
+<h2>Steps and Actions</h2>
 
 <p>
 </p>
 <p>
-.To start you need to create two virtual machine on Microsoft Azure. One virtual machine will be operating on Windows 1o the other on Linux Ubuntu.  Both will have two cpus and they must be on the same VNET.</p>
+To start you need to create two virtual machine on Microsoft Azure. Name one virtual machine VM1 and the other VM2. For VM1 one select Windows 10 as the operating system. . Important to remember your username/password. Also make sure both virtual machines are in the same Vnetwork.  I recommend selecting both virtual machines with 2vcpus.</p>
 
 <img src="https://i.imgur.com/9iuAbJF.png"/>
 
 
-<p>Once that is done go on the Windows machine and download Wireshark. I will attatch a link to the wireshark download. https://www.wireshark.org/download.html </p> 
+<p>Once you are done creating both virtual machines. Log into VM1 one using remote desktop, if you are on a mac you will have to download an app called Microsoft RDP. Once you logged in to VM1 using your useranme and password open internet explorer. Once in internet explorer look for Wireshark and download it in the virtual machine. Wireshark is used to inspect network traffic and also to troubleshoot any problems in the network. </p> 
 
 
 
