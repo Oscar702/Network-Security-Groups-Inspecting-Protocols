@@ -32,7 +32,12 @@ This a tutorial on Network Security Groups and Inspecting Network Protocols.To s
 <img src="https://i.imgur.com/9iuAbJF.png"/>
 
 
-<p>Once that is done go on the Windows machine and download Wireshark. I will attatch a link to the wireshark download. https://www.wireshark.org/download.html Once installed open Wireshark and filter for ICMP Traffic only. ICMP is a network layer protocol that relays messages concerning network connection issues. Ping uses this protocol, ping tests connectivity between hosts. When we filter wirehsark to only capture ICMP packets and ping the private IP address of our linux machine we can visually see the packets on wireshark. 
+<p>Once that is done go on the Windows machine and download Wireshark. I will attatch a link to the wireshark download. https://www.wireshark.org/download.html </p> 
+
+
+
+<img src="https://i.imgur.com/ReIE5nc.png" />
+<p>Once installed open Wireshark and filter for ICMP Traffic only. ICMP is a network layer protocol that relays messages concerning network connection issues. Ping uses this protocol, ping tests connectivity between hosts. When we filter wirehsark to only capture ICMP packets and ping the private IP address of our linux machine we can visually see the packets on wireshark. 
 </p>
 <br />
 <p>
