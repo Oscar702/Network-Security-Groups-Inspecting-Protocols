@@ -42,7 +42,7 @@ To start you need to create two virtual machine on Microsoft Azure. Name one vir
 <br />
 <p>
 <img src="https://i.imgur.com/Gs5XrNA.png"/>        
-<img src="https://i.imgur.com/IIUShxp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 </p>
 <p>
 We can inspect each individual packet and see the actual data that is being sent in each ping. the picture below demonstrates just that. 
