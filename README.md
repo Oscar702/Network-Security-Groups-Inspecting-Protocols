@@ -57,7 +57,7 @@ Next, we will perpetually ping VM2 (Linux) using command ping -t. This will cont
 <br />
 <img src="https://i.imgur.com/NrvtWD9.png" alt="ping -t"/>
 
-<p> while the Windows machine is pinging the Linux machine we will go to the Linux machine and block inbound ICMP traffic on it's firewall. Once we do that we will stop recieving echo replys from the Linux machine. We will block ICMP by creating a new Network Security Group on the Linux machine that will be set to block ICMP. We can allow the traffic by allowing ICMP on the Linux Network Security Groups page on Azure. </p>
+<p> while the VM1(Windows) is perpetually pinging VM2 (Linux)  we will go to back in the Azure portal to access VM2 NSG (Network Security Group). Once in the NSG of VM2 create a new rule to block inbound ICMP. Write value of 200 in priority and name rule DENY_ICMP_PING_FROM_ANYWHERE.  Once we do that we will stop recieving echo replys from the Linux machine. We will block ICMP by creating a new Network Security Group on the Linux machine that will be set to block ICMP. We can allow the traffic by allowing ICMP on the Linux Network Security Groups page on Azure. </p>
 
 </p>
 <img src="https://i.imgur.com/8FXlWxY.png"  alt="Disk Sanitization Steps"/>
