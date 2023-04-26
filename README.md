@@ -85,7 +85,8 @@ Now we will use wireshark to filter for DHCP. DHCP is the Dynamic Host Configura
 Time to filter DNS traffic. We will set wireshark to filter DNS traffic. We will initiate DNS traffic by typing in the command "nslookup www.google.com" this command essentially asks our DNS server what is google's IP address.
 </p>
 <br />
-<img src="https://i.imgur.com/VMcwmsO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/XbneSG8.png" alt="DNS screenshot" />
+
 </p>
 <p>
 Lastly we will filter for RDP traffic. When we enter tcp.port==3389 traffic is spammed non stop because we are using Remote Desktop Protocol to connect to our Virtual Machine. 
