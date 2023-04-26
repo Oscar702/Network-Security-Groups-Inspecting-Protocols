@@ -37,7 +37,7 @@ To start you need to create two virtual machine on Microsoft Azure. Name one vir
 
 
 <img src="https://i.imgur.com/ReIE5nc.png" />
-<p>Once installed open Wireshark and filter for ICMP Traffic only. ICMP is a network layer protocol that relays messages concerning network connection issues. Ping uses this protocol, ping tests connectivity between hosts. When we filter wirehsark to only capture ICMP packets and ping the private IP address of our linux machine we can visually see the packets on wireshark. 
+<p>Once installed open Wireshark and filter for ICMP Traffic only.The Internet Control Message Protocol (ICMP) is a protocol that devices within a network use to communicate problems with data transmission.We will ping VM2 and use Wireshark to filter and only capture ICMP packets. We will them be able to see the ICMP packets on Wireshark.
 </p>
 <br />
 <p>
