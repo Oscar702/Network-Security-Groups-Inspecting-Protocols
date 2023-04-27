@@ -92,7 +92,8 @@ Time to filter DNS traffic. We will set wireshark to filter DNS traffic. We will
 Lastly we will filter for RDP traffic. When we enter tcp.port==3389 traffic is spammed non stop because we are using Remote Desktop Protocol to connect to our Virtual Machine. 
 </p>
 <br />
-<img src="https://i.imgur.com/VxXGv6X.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/KGjtgfq.png" alt="TCP3389 screenshot"/>
+
 </p>
 <p># Network-Security-Groups-Inspecting-Protocols
 
