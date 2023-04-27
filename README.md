@@ -95,5 +95,7 @@ Lastly we will filter for RDP traffic. When we enter tcp.port==3389 traffic is s
 <img src="https://i.imgur.com/KGjtgfq.png" alt="TCP3389 screenshot"/>
 
 </p>
+
+<img src="https://i.imgur.com/RcfrtxZ.png" alt="delete screenshot"/>
 <p># Network-Security-Groups-Inspecting-Protocols
 
