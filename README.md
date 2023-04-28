@@ -68,21 +68,22 @@ Once in the NSG of VM2 create a new rule to block inbound ICMP. Write the value 
 <img src="https://i.imgur.com/xcqewfe.png" alt="Deny Rule"/>
           </p>
 <p>
-Next we will use our Windows machine to SSH to the Linux machine. SSH has no GUI it just gives the user access to the machines CLI. We will set the wireshark filter to capture SSH packets only. When we ssh into the Linux machine with the command prompt "ssh labuser@10.0.0.5" we can see that wireshark starts to immediately capture SSH packets.
+Then we will use our VM1 (Windows) to SSH to VM2 (Linux). SSH has no GUI it just gives the user access to the virtual machine's CLI. We will set the wireshark filter to capture SSH packets only. When we ssh into the Linux machine with the command prompt ssh labuser@10.0.0.5
+(this is VM2 private IP) and enter our password we will see that wireshark starts to immediately capture SSH packets.
 </p>
 <br />
 <img src="https://i.imgur.com/pSUpUpZ.png" alt="SSH"/>
 
 </p>
 <p>
-Now we will use wireshark to filter for DHCP. DHCP is the Dynamic Host Configuration Protocol this works on ports 67/68. It is used to assign IP addresses to machines. We will request a new ip address with the command "ipconfig /renew". Once we enter the command wireshark will capture DHCP traffic.
+Now we will use wireshark to filter for DHCP. DHCP is the Dynamic Host Configuration Protocol this works on ports 67/68. It is used to assign IP addresses to devices on the network. We will request a new ip address with the command "ipconfig /renew". Once we enter the command wireshark will capture DHCP traffic.
 </p>
 <br />
 <img src="https://i.imgur.com/YCqHmU0.png" alt="DHCP screenshot"/>
 
 </p>
 <p>
-Time to filter DNS traffic. We will set wireshark to filter DNS traffic. We will initiate DNS traffic by typing in the command "nslookup www.google.com" this command essentially asks our DNS server what is google's IP address.
+Time to filter DNS traffic. We will set wireshark to filter DNS traffic. We will initiate DNS traffic from Google.com by typing in the command "nslookup www.google.com".With this command we are asking the DNS server to provide us with Google's IP address.
 </p>
 <br />
 <img src="https://i.imgur.com/XbneSG8.png" alt="DNS screenshot" />
@@ -95,6 +96,7 @@ Lastly we will filter for RDP traffic. When we enter tcp.port==3389 traffic is s
 <img src="https://i.imgur.com/KGjtgfq.png" alt="TCP3389 screenshot"/>
 
 </p>
+Do not forget to delete your resource groups in Azure so you don't accumulate charges on your subscription.
 
 <img src="https://i.imgur.com/RcfrtxZ.png" alt="delete screenshot"/>
 <p># Network-Security-Groups-Inspecting-Protocols
