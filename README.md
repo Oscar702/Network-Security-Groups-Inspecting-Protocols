@@ -19,8 +19,8 @@ Here we will observe different network traffic to and from two virtual machines.
 
 <h2>Operating Systems Used in Virtual Machines </h2>
 
-- Windows 10 (21H2)
-- Ubuntu Server 20.04
+- Windows 10 
+- Linux Ubuntu 
 
 <h2>Steps and Actions</h2>
 
